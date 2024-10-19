@@ -14,19 +14,20 @@ const JobBoard = () => {
   ];
 
   // return list of jobs whose title includes title parameter
-  function filterJobsByTitle(jobs, title) {
-    console.log('filter')
-    return jobs.filter(job => job.title.toLowerCase().includes(title.toLowerCase()));
-  }
+  // function filterJobsByTitle(jobs, title) {
+  //   console.log('filter')
+  //   return jobs.filter(job => job.title.toLowerCase().includes(title.toLowerCase()));
+  // }
 
   // State to track the currently selected job
   const [selectedJob, setSelectedJob] = useState(null);
   const [titleSearchTerm, setTitleSearchTerm] = useState("");
+  const [locationSearchTerm, setLocationSearchTerm] = useState("");
   const [filteredJobs, setFilteredJobs] = useState(jobsData);
 
-  // This function will be passed to the child component
+  // This function will be passed to SearchBar to receive title search term
   const handleTitleSearchTerm = (term) => {
-    setTitleSearchTerm(term); // Update the parent's state with the value from the child
+    setTitleSearchTerm(term); // Update title search term
     
     // Filter jobs and update state
     const filtered = jobsData.filter(job => 
@@ -35,10 +36,22 @@ const JobBoard = () => {
     setFilteredJobs(filtered); // Trigger re-render with updated filtered jobs
   };
 
+  // This function will be passed to SearchBar to receive location search term
+  const handleLocationSearchTerm = (term) => {
+    setLocationSearchTerm(term); // Update loc search term
+    
+    // Filter jobs and update state
+    const filtered = jobsData.filter(job => 
+      job.location.toLowerCase().includes(term.toLowerCase())
+    );
+    console.log('filter')
+    setFilteredJobs(filtered); // Trigger re-render with updated filtered jobs
+  };
+
   return (
     <div className="job-board mt-10">
       {/* SearchBar component for filtering jobs */}
-      <SearchBar titleSearchTerm={handleTitleSearchTerm} />
+      <SearchBar titleSearchTerm={handleTitleSearchTerm} locationSearchTerm={handleLocationSearchTerm} />
 
       <div className="job-results-and-details">
         {/* JobResults component to display the list of jobs */}

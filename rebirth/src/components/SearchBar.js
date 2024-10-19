@@ -1,19 +1,26 @@
 import React, { useState } from 'react';
 
 // SearchBar component for filtering job results
-function SearchBar({ titleSearchTerm }) {
+function SearchBar({ titleSearchTerm, locationSearchTerm }) {
   // State to store the input values for position title, location, salary, and job type
   const [positionTitle, setPositionTitle] = useState('');
   const [location, setLocation] = useState('');
   const [salary, setSalary] = useState('');
   const [jobType, setJobType] = useState('');
 
-  // Placeholder function for the search functionality (to be implemented later)
-  const handleSearch = (e) => {
+  // Title search functionality
+  const handleTitleSearch = (e) => {
     const searchTerm = e.target.value;
     setPositionTitle(searchTerm);
     titleSearchTerm(searchTerm);
   };
+
+  // Location search functionality
+  const handleLocationSearch = (e) => {
+    const searchTerm = e.target.value;
+    setLocation(searchTerm);
+    locationSearchTerm(searchTerm);
+  }
 
   return (
     <div className="search-bar flex flex-wrap">
@@ -23,7 +30,7 @@ function SearchBar({ titleSearchTerm }) {
         type="text"
         placeholder="Enter Position Title"
         value={positionTitle}
-        onChange={handleSearch}
+        onChange={handleTitleSearch}
       />
 
       {/* Input for location */}
@@ -32,7 +39,7 @@ function SearchBar({ titleSearchTerm }) {
         type="text"
         placeholder="Enter Location"
         value={location}
-        onChange={(e) => setLocation(e.target.value)}
+        onChange={handleLocationSearch}
       />
 
       {/* Dropdown for salary range */}
@@ -52,7 +59,7 @@ function SearchBar({ titleSearchTerm }) {
       </select>
 
       {/* Button to trigger the search (functionality to be implemented later) */}
-      <button className="mt-2" onClick={handleSearch}>Search</button>
+      <button className="mt-2" >Search</button>
     </div>
   );
 };
