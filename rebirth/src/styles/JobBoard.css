@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-  font-family: Arial, sans-serif; /* Only affects JobBoard */
+  /* font-family: Arial, sans-serif; Only affects JobBoard */
   background-color: #f4f4f4; /* Light background for the JobBoard section */
   height: 100vh; /* Full viewport height */
 }
