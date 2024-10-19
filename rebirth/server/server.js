@@ -17,9 +17,11 @@ app.get('/', logger, (req, res) => {
 
 const userRouter = require('./routes/users')
 const employerRouter = require('./routes/employers')
+const jobRouter = require('./routes/jobs')
 
 app.use('/users', userRouter)
 app.use('/employers', employerRouter)
+app.use('/jobs', jobRouter)
 
 
 function logger(req, res, next) {

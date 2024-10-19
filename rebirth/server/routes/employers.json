@@ -5,7 +5,7 @@
             {
                 "title": "Software Engineer",
                 "description": "Develop and maintain web applications.",
-                "salary-range": "50000-70000",
+                "salary_range": "50000-70000",
                 "required-skills": [
                     "HTML",
                     "CSS",
@@ -20,8 +20,8 @@
             {
                 "title": "Cashier",
                 "description": "40+ hours of sufferings per week",
-                "salary-range": "Very little",
-                "required-skills": [
+                "salary_range": "Very little",
+                "required_skills": [
                     "Willpower"
                 ]
             }
