@@ -1,0 +1,30 @@
+[
+    {
+        "name": "McDonald's",
+        "postings": [
+            {
+                "title": "Software Engineer",
+                "description": "Develop and maintain web applications.",
+                "salary-range": "50000-70000",
+                "required-skills": [
+                    "HTML",
+                    "CSS",
+                    "JS"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Walmart",
+        "postings": [
+            {
+                "title": "Cashier",
+                "description": "40+ hours of sufferings per week",
+                "salary-range": "Very little",
+                "required-skills": [
+                    "Willpower"
+                ]
+            }
+        ]
+    }
+]
