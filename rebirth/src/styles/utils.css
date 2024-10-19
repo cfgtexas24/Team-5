@@ -1,0 +1,344 @@
+/* Viewports */
+
+/* Iphone 14 Pro */
+/* @media (min-width: 393px) {} */
+
+/* xs */
+/* @media (min-width: 475px) {} */
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* tablet */
+/* @media (min-width: 768px) {} */
+
+/* laptop-1x */
+/* @media (min-width: 1024px) {} */
+
+/* laptop-2x */
+/* @media (min-width: 1280px) {} */
+
+/* laptop-3x */
+/* @media (min-width: 1366px) {} */
+
+/* desktop-1x */
+/* @media (min-width: 1440px) {} */
+
+/* desktop-2x */
+/* @media (min-width: 1536px) {} */
+
+/* desktop-3x */
+/* @media (min-width: 1920px) {} */
+
+/* Utility Classes */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* border: solid 1px red; */
+}
+
+section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.new_page {
+    padding-top: 2rem;
+}
+
+header {
+    padding: 0;
+}
+
+footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* Iphone 14 Pro */
+@media (min-width: 393px) {}
+
+/* xs */
+@media (min-width: 475px) {
+    .container {
+        max-width: 475px;
+    }
+}
+
+/* sm */
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+/* md */
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .new_page {
+        padding-top: 2.5rem;
+    }
+
+    header {
+        padding: 0;
+    }
+    
+    footer {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+/* laptop-1x */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 928px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    .new_page {
+        padding-top: 3rem;
+    }
+}
+
+/* laptop-2x */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1152px;
+    }
+}
+
+/* laptop-3x */
+@media (min-width: 1366px) {
+    .container {
+        max-width: 1238px;
+    }
+}
+
+/* desktop-1x */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1312px;
+    }
+
+    section {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+    .new_page {
+        padding-top: 4rem;
+    }
+
+    header {
+        padding: 0;
+    }
+    
+    footer {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+}
+
+/* desktop-2x */
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+/* desktop-3x */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Utility Animation Classes */
+.animate {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate.animate--infinite {
+    animation-iteration-count: infinite;
+}
+
+.animate.animate--delay-1s {
+    animation-delay: 1s;
+}
+
+.animate.animate--fast {
+    animation-duration: 0.6s;
+}
+
+.animate.animate--slow {
+    animation-duration: 3s;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-300px)
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(300px)
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.slideInLeft {
+    animation-name: slideInLeft;
+    animation-timing-function: ease-in;
+}
+
+.slideInRight {
+    animation-name: slideInRight;
+    animation-timing-function: ease-in;
+}
+
+.rotate {
+    animation-name: rotate;
+    animation-timing-function: linear;
+}
+
+.bounce {
+    animation-name: bounce;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Buttons */
+button {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}

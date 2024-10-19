@@ -1,17 +1,413 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Color Sets */
+:root {
+    --clr-light-background: #f0f0f0;
+    --clr-dark-background:  #1E1E1E;
+
+    --clr-white:   hsl(0, 0%, 100%);
+    --clr-gray100: hsl(0, 0%, 90%);
+    --clr-gray200: hsl(0, 0%, 80%);
+    --clr-gray250: hsl(0, 0%, 75%);
+    --clr-gray300: hsl(0, 0%, 70%);
+    --clr-gray400: hsl(0, 0%, 60%);
+    --clr-gray500: hsl(0, 0%, 50%);
+    --clr-gray600: hsl(0, 0%, 40%);
+    --clr-gray700: hsl(0, 0%, 30%);
+    --clr-gray800: hsl(0, 0%, 20%);
+    --clr-gray900: hsl(0, 0%, 10%);
+    --clr-black:   hsl(0, 0%, 0%);
+
+    --clr-light-yellow:   #FFD67C;
+    --clr-Dark-yellow: #EDAE26;
+    --clr-light-gray: #F2EEEE;
+
+    --clr-red:          #ED0000;
+    --clr-red-light:    #FFD4D4;
+    --clr-green:        #04BC00;
+    --clr-green-light:  #C8FFC7;
+    --clr-yellow:       #F1D900;
+    --clr-yellow-light: #FFFACC;
+    --clr-blue:         #0055FF;
+    --clr-blue-light:   #CCCCFF;
+
+    /* Sizes */
+    --size-xxxs:     0.125rem;
+    --size-xxs:      0.25rem;
+    --size-xs:       0.5rem;
+    --size-sm:       0.75rem;
+    --size-base:     1rem;    
+    --size-lg125:    1.125rem;
+    --size-lg25:     1.25rem;
+    --size-lg50:     1.50rem;
+    --size-lg75:     1.75rem;
+    --size-2xl:      2rem;
+    --size-3xl:      3rem;
+    --size-4xl:      4rem;
+    --size-5xl:      5rem;
+    --size-6xl:      6rem;
+    --size-7xl:      7rem;
+    --size-75xl:     7.5rem;
+    --size-8xl:      8rem;
+    --size-9xl:      9rem;
+    --size-10xl:     10rem;
+}
+
+html {
+    /* scroll-behavior: smooth; */
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.dark-mode {
+    --clr-light-background: #221F20;
+    --clr-dark-background:  #F0F0F0;
+
+    --clr-white:   hsl(0, 0%, 0%);
+    --clr-gray100: hsl(0, 0%, 10%);
+    --clr-gray200: hsl(0, 0%, 20%);
+    --clr-gray250: hsl(0, 0%, 25%);
+    --clr-gray300: hsl(0, 0%, 30%);
+    --clr-gray400: hsl(0, 0%, 40%);
+    --clr-gray500: hsl(0, 0%, 50%);
+    --clr-gray600: hsl(0, 0%, 60%);
+    --clr-gray700: hsl(0, 0%, 70%);
+    --clr-gray800: hsl(0, 0%, 80%);
+    --clr-gray900: hsl(0, 0%, 90%);
+    --clr-black:   hsl(0, 0%, 100%);
+}
+
+.glass-morphism {
+    background: linear-gradient(269deg, rgba(240, 240, 240, 0.70) 0.47%, #F0F0F0 99.51%);
+}
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    padding: 0%;
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+}
+
+/* .light-mode {} */
+
+menu {
+    padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+.global__divider {
+    border: var(--clr-dark-background) solid 0.5px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 1px;
+}
+
+
+
+/* Typography */
+h1 {
+    color: inherit;
+    font-family: "Amatic SC";
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h2 {
+    color: inherit;
+    font-family: "Amatic SC";
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h3 {
+    color: inherit;
+    font-family: "Amatic SC";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h4 {
+    color: inherit;
+    font-family: "Amatic SC";
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h5 {
+    color: inherit;
+    font-family: "Amatic SC";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h6 {
+    color: inherit;
+    font-family: "Amatic SC";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.h7 {
+    color: inherit;
+    font-family: "Amatic SC";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.h8 {
+    color: inherit;
+    font-family: "Amatic SC";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.t1 {
+    color: inherit;
+    font-family: 'roboto';
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.t2 {
+    color: inherit;
+    font-family: 'roboto';
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.t3 {
+    color: inherit;
+    font-family: 'roboto';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.t4 {
+    color: inherit;
+    font-family: 'roboto';
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.t5 {
+    color: inherit;
+    font-family: 'roboto';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+p {
+    color: inherit;
+    font-family: 'roboto';
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+strong {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+    width: var(--size-sm);
+    background-color: var(--clr-white);
+    border-radius: var(--size-base);
+}
+   
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px rgb(0, 0, 0);
+}
+   
+body::-webkit-scrollbar-thumb {
+    border-radius: var(--size-base);
+    background-color: var(--clr-gray250);
+    outline: 1px solid var(--clr-gray250);
+}
+
+/* tablet */
+@media (min-width: 768px) {
+    p {
+        color: inherit;
+        font-family: 'roboto';
+        font-size: 0.9375rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+/* laptop-1x */
+@media (min-width: 1024px) {
+    /* Text Configuration */
+    h1 {
+        color: inherit;
+        font-family: "Amatic SC";
+        font-size: 4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    h2 {
+        color: inherit;
+        font-family: "Amatic SC";
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    h3 {
+        color: inherit;
+        font-family: "Amatic SC";
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    h4 {
+        color: inherit;
+        font-family: "Amatic SC";
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    h5 {
+        color: inherit;
+        font-family: "Amatic SC";
+        font-size: 1.75rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    h6 {
+        color: inherit;
+        font-family: "Amatic SC";
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .h7 {
+        color: inherit;
+        font-family: "Amatic SC";
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .h8 {
+        color: inherit;
+        font-family: "Amatic SC";
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .t1 {
+        color: inherit;
+        font-family: 'roboto';
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
+    .t2 {
+        color: inherit;
+        font-family: 'roboto';
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
+    .t3 {
+        color: inherit;
+        font-family: 'roboto';
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
+    .t4 {
+        color: inherit;
+        font-family: 'roboto';
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
+    .t5 {
+        color: inherit;
+        font-family: 'roboto';
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    p {
+        color: inherit;
+        font-family: 'roboto';
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 }
