@@ -10,7 +10,7 @@ import Dashboard from './pages/Dashboard';
 import JobBoard from './pages/user/JobBoard';
 import MyLearning from './pages/user/MyLearning';
 import Profile from './pages/user/Profile';
-// import DiscussionBoard from './pages/DiscussionBoard';
+import DiscussionBoard from './pages/user/DiscussionBoard';
 import NoPage from './pages/NoPage';
 import SignUp from './pages/SignUp';
 import MyApplication from './pages/user/MyApplication';
@@ -30,7 +30,7 @@ export default function App() {
                         <Route path='/user/mylearning' element={<MyLearning />} />
                         <Route path='/user/profile' element={<Profile />} />
                         <Route path='/user/myapplications' element={<MyApplication />}  />
-                        {/* <Route path='/user/discussion-board' element={<DiscussionBoard />} /> */}
+                        <Route path='/user/discussion-board' element={<DiscussionBoard />} />
                         <Route path='/user/settings' element={<Settings />} />
                     </Route>
                     <Route path='/employer'>
