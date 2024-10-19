@@ -21,7 +21,7 @@ const ProfileLink = () => {
         </div>
         
         <Link to='/user/profile'>
-            <img src={name === 'John' ? 0 : 1} alt="profile-icon" className="w-14 h-14 ml-4 rounded-full object-cover"/>
+        <img src={name === 'John' ? profileIcon : profileIcon2} alt="profile-icon" className="w-14 h-14 ml-4 rounded-full object-cover"/>
         </Link>
     </div>
   );
