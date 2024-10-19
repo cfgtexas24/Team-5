@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import profileIcon from "../assets/prof_photo.jpg";
+import profileIcon2 from "../assets/Alice.jpg";
 import notificationIcon from '../assets/notifications.png';
 
 const ProfileLink = () => {
   const location = useLocation(); // Get the current route
+  const name = localStorage.getItem('name');
 
   // Check if the current route is '/user/profile'
   if (location.pathname === '/user/profile') {
@@ -19,7 +21,7 @@ const ProfileLink = () => {
         </div>
         
         <Link to='/user/profile'>
-            <img src={profileIcon} alt="profile-icon" className="w-14 h-14 ml-4 rounded-full object-cover"/>
+            <img src={name === 'John' ? 0 : 1} alt="profile-icon" className="w-14 h-14 ml-4 rounded-full object-cover"/>
         </Link>
     </div>
   );
