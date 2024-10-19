@@ -13,8 +13,8 @@
 
 
 import React from "react";
-import pencil from "../assets/pencil.png";
-import accountProfile from "../assets/account_circle.png";
+import pencil from "../../assets/pencil.png";
+import accountProfile from "../../assets/account_circle.png";
 
 const Profile = () => {
   return (
