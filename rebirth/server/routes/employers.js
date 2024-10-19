@@ -3,7 +3,7 @@ const router = express.Router();
 const fs = require('fs');
 const path = require('path');
 
-const employersFilePath = path.join(__dirname, 'employers.json');
+const employersFilePath = path.join(__dirname, '../data/employers.json');
 
 function getEmployers() {
     const employersData = fs.readFileSync(employersFilePath);

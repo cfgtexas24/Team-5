@@ -3,7 +3,7 @@ const router = express.Router();
 const fs = require('fs');
 const path = require('path');
 
-const usersFilePath = path.join(__dirname, 'users.json');
+const usersFilePath = path.join(__dirname, '../data/users.json');
 
 function getUsers() {
     const usersData = fs.readFileSync(usersFilePath);
@@ -42,10 +42,11 @@ router.post('/', (req, res) => {
 });*/
 
 router
-    .route('/:id')
+    .route('/:email')
     .get((req, res) => {
         const users = getUsers();
-        const user = users[req.params.id];
+        const email = req.params.email;
+        const user = users.find(u => u.email === email);
         if (user) {
             res.json(user);
         } else {
@@ -54,21 +55,21 @@ router
     })
     .put((req, res) => {
         const users = getUsers();
-        const user = users[req.params.id];
+        const user = users[req.params.email];
         if (user) {
             Object.assign(user, req.body);
             saveUsers(users);
-            res.send(`Updated User with ID ${req.params.id}`);
+            res.send(`Updated User with ID ${req.params.email}`);
         } else {
             res.status(404).send('User not found');
         }
     })
     .delete((req, res) => {
         const users = getUsers();
-        if (users[req.params.id]) {
-            users.splice(req.params.id, 1);
+        if (users[req.params.email]) {
+            users.splice(req.params.email, 1);
             saveUsers(users); 
-            res.send(`Deleted User with ID ${req.params.id}`);
+            res.send(`Deleted User with ID ${req.params.email}`);
         } else {
             res.status(404).send('User not found');
         }
