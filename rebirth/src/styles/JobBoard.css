@@ -1,0 +1,139 @@
+/* JobBoard-specific styles */
+
+/* Job Board container */
+.job-board {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-family: Arial, sans-serif; /* Only affects JobBoard */
+  background-color: #f4f4f4; /* Light background for the JobBoard section */
+  height: 100vh; /* Full viewport height */
+}
+
+/* Search bar container */
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input,
+.search-bar select {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #ffcc4d;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #f7b900;
+}
+
+/* Job results and details container */
+.job-results-and-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  height: 100%; /* Ensure it expands full height */
+}
+
+/* Job Results (List) */
+.job-results {
+  width: 30%;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  height: 100%; /* Full height to fill available space */
+}
+
+.job-results h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.job-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.job-item:last-child {
+  border-bottom: none;
+}
+
+.job-item p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Job Details */
+.job-details {
+  width: 65%;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-details h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.job-details p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.job-details .job-description {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.job-details button {
+  padding: 10px 20px;
+  background-color: #ffcc4d;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.job-details button:hover {
+  background-color: #f7b900;
+}
+
+/* Scroll styling */
+.job-results::-webkit-scrollbar {
+  width: 8px;
+}
+
+.job-results::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}

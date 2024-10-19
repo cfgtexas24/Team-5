@@ -7,21 +7,23 @@ import './styles/utils.css';
 import Home from './pages/Home';
 import reportWebVitals from './reportWebVitals';
 import Dashboard from './pages/Dashboard';
-import JobBoard from './pages/JobBoard';
-import MyLearning from './pages/MyLearning';
-import Profile from './pages/Profile';
+import JobBoard from './pages/user/JobBoard';
+import MyLearning from './pages/user/MyLearning';
+import Profile from './pages/user/Profile';
 // import DiscussionBoard from './pages/DiscussionBoard';
 import NoPage from './pages/NoPage';
 import SignUp from './pages/SignUp';
-import MyApplication from './pages/MyApplication';
-import Settings from './pages/Settings';
+import MyApplication from './pages/user/MyApplication';
+import Settings from './pages/user/Settings';
+import JobPostings from './pages/employer/JobPostings';
+import EmployerSettings from './pages/employer/EmployerSettings';
 
 export default function App() {
     return (
         <BrowserRouter>
             <Routes>
+                <Route path='' element={<SignUp />} />
                 <Route path='' element={<Home />}>
-                    <Route index element={<SignUp />} />
                     <Route path='/user'>
                         <Route index element={<Navigate to='/user/job-search' />} />
                         <Route path='/user/job-search' element={<JobBoard />} />
@@ -32,7 +34,9 @@ export default function App() {
                         <Route path='/user/settings' element={<Settings />} />
                     </Route>
                     <Route path='/employer'>
-                        <Route index element={<Dashboard />} />
+                        <Route index element={<Navigate to='/employer/job-postings' />} />
+                        <Route path='/employer/job-postings' element={<JobPostings />} />
+                        <Route path='/employer/settings' element={<EmployerSettings />} />
                     </Route>
                     <Route path='/admin'>
                         <Route index element={<Dashboard />} />

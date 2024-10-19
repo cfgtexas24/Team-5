@@ -113,7 +113,7 @@ svg {
 /* Typography */
 h1 {
     color: inherit;
-    font-family: "Amatic SC";
+    font-family: "Inter";
     font-size: 3rem;
     font-style: normal;
     font-weight: 700;
@@ -122,7 +122,7 @@ h1 {
 
 h2 {
     color: inherit;
-    font-family: "Amatic SC";
+    font-family: "Inter";
     font-size: 2.5rem;
     font-style: normal;
     font-weight: 700;
@@ -131,7 +131,7 @@ h2 {
 
 h3 {
     color: inherit;
-    font-family: "Amatic SC";
+    font-family: "Inter";
     font-size: 2rem;
     font-style: normal;
     font-weight: 700;
@@ -140,7 +140,7 @@ h3 {
 
 h4 {
     color: inherit;
-    font-family: "Amatic SC";
+    font-family: "Inter";
     font-size: 1.75rem;
     font-style: normal;
     font-weight: 700;
@@ -149,7 +149,7 @@ h4 {
 
 h5 {
     color: inherit;
-    font-family: "Amatic SC";
+    font-family: "Inter";
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
@@ -158,7 +158,7 @@ h5 {
 
 h6 {
     color: inherit;
-    font-family: "Amatic SC";
+    font-family: "Inter";
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 700;
@@ -167,7 +167,7 @@ h6 {
 
 .h7 {
     color: inherit;
-    font-family: "Amatic SC";
+    font-family: "Inter";
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
@@ -176,7 +176,7 @@ h6 {
 
 .h8 {
     color: inherit;
-    font-family: "Amatic SC";
+    font-family: "Inter";
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;
@@ -185,7 +185,7 @@ h6 {
 
 .t1 {
     color: inherit;
-    font-family: 'roboto';
+    font-family: 'Inter';
     font-size: 2.25rem;
     font-style: normal;
     font-weight: 400;
@@ -194,7 +194,7 @@ h6 {
 
 .t2 {
     color: inherit;
-    font-family: 'roboto';
+    font-family: 'Inter';
     font-size: 2rem;
     font-style: normal;
     font-weight: 400;
@@ -203,7 +203,7 @@ h6 {
 
 .t3 {
     color: inherit;
-    font-family: 'roboto';
+    font-family: 'Inter';
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
@@ -212,7 +212,7 @@ h6 {
 
 .t4 {
     color: inherit;
-    font-family: 'roboto';
+    font-family: 'Inter';
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
@@ -221,7 +221,7 @@ h6 {
 
 .t5 {
     color: inherit;
-    font-family: 'roboto';
+    font-family: 'Inter';
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
@@ -230,7 +230,7 @@ h6 {
 
 p {
     color: inherit;
-    font-family: 'roboto';
+    font-family: 'Inter';
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
@@ -274,7 +274,7 @@ body::-webkit-scrollbar-thumb {
 @media (min-width: 768px) {
     p {
         color: inherit;
-        font-family: 'roboto';
+        font-family: 'Inter';
         font-size: 0.9375rem;
         font-style: normal;
         font-weight: 400;
@@ -287,7 +287,7 @@ body::-webkit-scrollbar-thumb {
     /* Text Configuration */
     h1 {
         color: inherit;
-        font-family: "Amatic SC";
+        font-family: "Inter";
         font-size: 4rem;
         font-style: normal;
         font-weight: 700;
@@ -296,7 +296,7 @@ body::-webkit-scrollbar-thumb {
 
     h2 {
         color: inherit;
-        font-family: "Amatic SC";
+        font-family: "Inter";
         font-size: 3rem;
         font-style: normal;
         font-weight: 700;
@@ -305,7 +305,7 @@ body::-webkit-scrollbar-thumb {
 
     h3 {
         color: inherit;
-        font-family: "Amatic SC";
+        font-family: "Inter";
         font-size: 2.5rem;
         font-style: normal;
         font-weight: 700;
@@ -314,7 +314,7 @@ body::-webkit-scrollbar-thumb {
 
     h4 {
         color: inherit;
-        font-family: "Amatic SC";
+        font-family: "Inter";
         font-size: 2rem;
         font-style: normal;
         font-weight: 700;
@@ -323,7 +323,7 @@ body::-webkit-scrollbar-thumb {
 
     h5 {
         color: inherit;
-        font-family: "Amatic SC";
+        font-family: "Inter";
         font-size: 1.75rem;
         font-style: normal;
         font-weight: 600;
@@ -332,7 +332,7 @@ body::-webkit-scrollbar-thumb {
 
     h6 {
         color: inherit;
-        font-family: "Amatic SC";
+        font-family: "Inter";
         font-size: 1.5rem;
         font-style: normal;
         font-weight: 700;
@@ -341,7 +341,7 @@ body::-webkit-scrollbar-thumb {
 
     .h7 {
         color: inherit;
-        font-family: "Amatic SC";
+        font-family: "Inter";
         font-size: 1.25rem;
         font-style: normal;
         font-weight: 700;
@@ -350,7 +350,7 @@ body::-webkit-scrollbar-thumb {
 
     .h8 {
         color: inherit;
-        font-family: "Amatic SC";
+        font-family: "Inter";
         font-size: 1.125rem;
         font-style: normal;
         font-weight: 700;
@@ -359,7 +359,7 @@ body::-webkit-scrollbar-thumb {
 
     .t1 {
         color: inherit;
-        font-family: 'roboto';
+        font-family: 'Inter';
         font-size: 3rem;
         font-style: normal;
         font-weight: 400;
@@ -368,7 +368,7 @@ body::-webkit-scrollbar-thumb {
     
     .t2 {
         color: inherit;
-        font-family: 'roboto';
+        font-family: 'Inter';
         font-size: 2.5rem;
         font-style: normal;
         font-weight: 400;
@@ -377,7 +377,7 @@ body::-webkit-scrollbar-thumb {
     
     .t3 {
         color: inherit;
-        font-family: 'roboto';
+        font-family: 'Inter';
         font-size: 2rem;
         font-style: normal;
         font-weight: 400;
@@ -386,7 +386,7 @@ body::-webkit-scrollbar-thumb {
     
     .t4 {
         color: inherit;
-        font-family: 'roboto';
+        font-family: 'Inter';
         font-size: 1.5rem;
         font-style: normal;
         font-weight: 400;
@@ -395,7 +395,7 @@ body::-webkit-scrollbar-thumb {
     
     .t5 {
         color: inherit;
-        font-family: 'roboto';
+        font-family: 'Inter';
         font-size: 1.25rem;
         font-style: normal;
         font-weight: 400;
@@ -404,7 +404,7 @@ body::-webkit-scrollbar-thumb {
 
     p {
         color: inherit;
-        font-family: 'roboto';
+        font-family: 'Inter';
         font-size: 1rem;
         font-style: normal;
         font-weight: 400;
