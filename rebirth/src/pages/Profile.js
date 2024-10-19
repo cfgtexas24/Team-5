@@ -67,7 +67,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
-      <div style={{ width: "100%", marginTop: "150px" }}>
+      <div style={{ width: "100%", marginTop: "130px" }}>
         <h3>My Applications</h3>
         <div style={{ maxHeight: "200px", overflowY: "scroll", border: "1px solid #ccc", padding: "10px" }}>
           <ul className="flex flex-col gap-4">
