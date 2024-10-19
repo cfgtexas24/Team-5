@@ -73,52 +73,62 @@ const Profile = () => {
           <ul className="flex flex-col gap-4">
             <li>
               <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Application 1
+                Job Title
+                <p>Description</p>
               </div>
             </li>
             <li>
               <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Application 2
+                Job Title
+                <p>Description</p>
               </div>
             </li>
             <li>
               <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Application 3
+                Job Title
+                <p>Description</p>
               </div>
             </li>
             <li>
               <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Application 4
+                Job Title
+                <p>Description</p>
               </div>
             </li>
             <li>
               <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Application 5
+                Job Title
+                <p>Description</p>
               </div>
             </li>
             <li>
               <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Application 6
+                Job Title
+                <p>Description</p>
               </div>
             </li>
             <li>
               <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Application 7
+                Job Title
+                <p>Description</p>
               </div>
             </li>
             <li>
               <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Application 8
+                Job Title
+                <p>Description</p>
               </div>
             </li>
             <li>
               <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Application 9
+                Job Title
+                <p>Description</p>
               </div>
             </li>
             <li>
               <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Application 10
+                Job Title
+                <p>Description</p>
               </div>
             </li>
           </ul>
