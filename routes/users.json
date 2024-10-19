@@ -1,0 +1,50 @@
+[
+  {
+    "name": "John",
+    "email": "jonathanswift@gmail.com",
+    "phone_number": "1234567890",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "courses": [
+      "Web Development"
+    ],
+    "income": 1000
+  },
+  {
+    "name": "Doe",
+    "email": "doe@example.com",
+    "phone_number": "9876543210",
+    "skills": [
+      "Python",
+      "C++"
+    ],
+    "courses": [
+      "Computer Science"
+    ],
+    "income": 2000
+  },
+  {
+    "name": "Alice",
+    "email": "alice@example.com",
+    "phone_number": "5556667777",
+    "skills": [
+      "React",
+      "Node.js"
+    ],
+    "courses": [
+      "Full-Stack Development"
+    ],
+    "income": 1500
+  },
+  {
+    "name": "Bread",
+    "email": "",
+    "phone_number": "",
+    "skills": [],
+    "courses": [],
+    "income": 0
+  }
+]
