@@ -17,7 +17,7 @@ const JobBoard = () => {
   const [selectedJob, setSelectedJob] = useState(null);
 
   return (
-    <div className="job-board">
+    <div className="job-board mt-10">
       {/* SearchBar component for filtering jobs */}
       <SearchBar />
 

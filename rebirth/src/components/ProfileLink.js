@@ -12,7 +12,7 @@ const ProfileLink = () => {
   }
 
   return (
-    <div className='absolute top-16 right-16 flex gap-4 items-center'>
+    <div className='absolute top-4 right-4 flex gap-4 items-center w-24'>
         <div>
             <img src={notificationIcon} alt="notification-icon" />
         </div>

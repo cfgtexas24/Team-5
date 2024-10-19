@@ -1,3 +1,4 @@
+// Routing employers contains HTTPS request routes and simple get, post functionality
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
@@ -14,11 +15,13 @@ function saveEmployers(employers) {
     fs.writeFileSync(employersFilePath, JSON.stringify(employers, null, 2));
 }
 
+// get request to get all employers
 router.get('/', (req, res) => {
     const employers = getEmployers();
     res.json(employers);
 });
 
+// post request to add new employer
 router.post('/', (req, res) => {
     const employers = getEmployers();
     const newEmployer = {
