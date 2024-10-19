@@ -22,6 +22,9 @@ const JobDetails = () => {
       <p>Location: {job.location}</p>
 <<<<<<< Updated upstream
 
+      {/* Display the job type */}
+      <p>Type: {job.job_type}</p>
+
       {/* Display the job description */}
 =======
       <p>Type: {job.job_type}</p>

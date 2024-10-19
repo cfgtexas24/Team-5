@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< Updated upstream
-=======
 import { useLocation } from 'react-router-dom';
 import SkillsGapAnalysis from '../../components/SkillsGapAnalysis';
 import RecommendedCourses from '../../components/RecommendedCourses';
@@ -19,7 +17,6 @@ const generateChartData = (percentage) => ({
     },
   ],
 });
->>>>>>> Stashed changes
 
 const MyLearning = () => {
   const location = useLocation();
@@ -51,20 +48,27 @@ const MyLearning = () => {
     businessIntelligence: 19,
   });
 
+  const courses = [
+    { name: 'Digital Marketing & E-commerce', completion: percentages.digitalMarketing },
+    { name: 'Project Management', completion: percentages.projectManagement },
+    { name: 'UX Design', completion: percentages.uxDesign },
+    { name: 'Cybersecurity', completion: percentages.cybersecurity },
+    { name: 'Digital Marketing & E-Commerce', completion: percentages.digitalMarketingEcommerce },
+    { name: 'IT Automation with Python', completion: percentages.itAutomation },
+    { name: 'Advanced Data Analytics', completion: percentages.advancedDataAnalytics },
+    { name: 'Business Intelligence', completion: percentages.businessIntelligence },
+  ];
+
   const getColor = (percentage) => {
     if (percentage >= 0 && percentage <= 20) return '#fb4b4b';
     if (percentage >= 21 && percentage <= 50) return '#ffa879';
     if (percentage >= 51 && percentage <= 75) return '#ffc163';
     if (percentage >= 76 && percentage <= 99) return '#feff5c';
     if (percentage === 100) return '#c0ff33';
-    return '#f0f0f0'; // Default color
+    return '#f0f0f0';
   };
 
   return (
-<<<<<<< Updated upstream
-    <div style={{ marginTop: '100px' }}>
-      <h2>My Learning</h2>
-=======
     <div className="mt-10">
       <h2 className="text-2xl font-bold mb-6">My Learning</h2>
 
@@ -77,66 +81,43 @@ const MyLearning = () => {
       )}
 
       {/* Display Learning Progress */}
->>>>>>> Stashed changes
       <div style={{ maxHeight: '400px', overflowY: 'scroll' }}>
         <ul className="flex flex-col gap-4">
-          <li>
-            <div style={{ background: getColor(percentages.digitalMarketing), borderRadius: "8px", padding: "10px" }}>
-              <strong>Digital Marketing & E-commerce</strong>
-              <p style={{ color: "black" }}>{percentages.digitalMarketing}% completed</p>
-            </div>
-          </li>
-          <li>
-            <div style={{ background: getColor(percentages.projectManagement), borderRadius: "8px", padding: "10px" }}>
-              <strong>Project Management</strong>
-              <p style={{ color: "black" }}>{percentages.projectManagement}% completed</p>
-            </div>
-          </li>
-          <li>
-            <div style={{ background: getColor(percentages.uxDesign), borderRadius: "8px", padding: "10px" }}>
-              <strong>UX Design</strong>
-              <p style={{ color: "black" }}>{percentages.uxDesign}% completed</p>
-            </div>
-          </li>
-          <li>
-            <div style={{ background: getColor(percentages.cybersecurity), borderRadius: "8px", padding: "10px" }}>
-              <strong>Cybersecurity</strong>
-              <p style={{ color: "black" }}>{percentages.cybersecurity}% completed</p>
-            </div>
-          </li>
-          <li>
-            <div style={{ background: getColor(percentages.digitalMarketingEcommerce), borderRadius: "8px", padding: "10px" }}>
-              <strong>Digital Marketing & E-Commerce</strong>
-              <p style={{ color: "black" }}>{percentages.digitalMarketingEcommerce}% completed</p>
-            </div>
-          </li>
-          <li>
-            <div style={{ background: getColor(percentages.itAutomation), borderRadius: "8px", padding: "10px" }}>
-              <strong>IT Automation with Python</strong>
-              <p style={{ color: "black" }}>{percentages.itAutomation}% completed</p>
-            </div>
-          </li>
-          <li>
-            <div style={{ background: getColor(percentages.advancedDataAnalytics), borderRadius: "8px", padding: "10px" }}>
-              <strong>Advanced Data Analytics</strong>
-              <p style={{ color: "black" }}>{percentages.advancedDataAnalytics}% completed</p>
-            </div>
-          </li>
-          <li>
-            <div style={{ background: getColor(percentages.businessIntelligence), borderRadius: "8px", padding: "10px" }}>
-              <strong>Business Intelligence</strong>
-              <p style={{ color: "black" }}>{percentages.businessIntelligence}% completed</p>
-            </div>
-          </li>
+          {courses.map((course, index) => (
+            <li key={index} className="flex items-center gap-4">
+              <div
+                style={{
+                  background: getColor(course.completion),
+                  borderRadius: '8px',
+                  padding: '10px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  width: '100%',
+                }}
+              >
+                <div style={{ width: '80px', height: '80px' }}>
+                  <Doughnut
+                    data={generateChartData(course.completion)}
+                    options={{
+                      cutout: '70%',
+                      plugins: { legend: { display: false } },
+                    }}
+                  />
+                </div>
+
+                <div className="flex-grow px-4">
+                  <strong>{course.name}</strong>
+                  <p style={{ color: 'black' }}>{course.completion}% completed</p>
+                </div>
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
   );
 };
 
-<<<<<<< Updated upstream
-export default MyLearning;
-=======
 export default MyLearning;
 
->>>>>>> Stashed changes

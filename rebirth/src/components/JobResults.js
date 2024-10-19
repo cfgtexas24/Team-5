@@ -9,7 +9,7 @@ const JobResults = ({ jobs, onSelectJob }) => {
         jobs.map((job, index) => (
           <div
             key={index}
-            className="job-item"
+            className="job-item hover:cursor-pointer"
             onClick={() => onSelectJob(job)} // When clicked, select the job to view details
           >
             {/* Display the job title */}
@@ -17,6 +17,9 @@ const JobResults = ({ jobs, onSelectJob }) => {
 
             {/* Display the company name and location */}
             <p>{job.company} - {job.location}</p>
+
+            {/* Display the job type */}
+            <p>{job.job_type}</p>
           </div>
         ))
       ) : (
