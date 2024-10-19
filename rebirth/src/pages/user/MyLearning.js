@@ -68,9 +68,21 @@ const MyLearning = () => {
     return '#f0f0f0';
   };
 
+  // Dummy learning streak data (in days)
+  const learningStreak = 7; // Replace with dynamic value later
+
   return (
     <div className="mt-10">
-      <h2 className="text-2xl font-bold mb-6">My Learning</h2>
+      <div className="flex items-center gap-2">
+        {/* Streak Container */}
+        <div className="flex items-center bg-white shadow-lg rounded-lg p-4 mb-6">
+          <span style={{ fontSize: '2rem', color: '#FF4500' }}>🔥</span>
+          <div className="ml-3">
+            <h2 className="text-xl font-bold">My Learning</h2>
+            <p className="text-gray-600">{learningStreak} day learning streak</p>
+          </div>
+        </div>
+      </div>
 
       {/* Render Skills Gap Analysis and Recommended Courses if job is selected */}
       {job.title && (
@@ -120,4 +132,5 @@ const MyLearning = () => {
 };
 
 export default MyLearning;
+
 
