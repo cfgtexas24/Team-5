@@ -1,21 +1,7 @@
-// import React from 'react'
-
-// const Profile = () => {
-//   return (
-//     <div>Profile</div>
-//   )
-// }
-
-// export default Profile;
-
-
-
-
-
 import React, { useEffect, useState } from "react";
 import pencil from "../../assets/pencil.png";
 import accountProfile from "../../assets/account_circle.png";
-import RadarChart from "../../components/radarChart";
+import RadarChart from "../../components/RadarChart";
 
 const Profile = () => {
     const [users, setUsers] = useState([]);
