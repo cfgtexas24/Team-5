@@ -5,16 +5,6 @@
     box-sizing: border-box;
   }
   
-  body {
-    
-    background-color: #FFD67C;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
   .signup-container {
     display: flex;
     justify-content: center;
