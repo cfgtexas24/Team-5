@@ -13,6 +13,8 @@
 
 
 import React from "react";
+import pencil from "../assets/pencil.png";
+import accountProfile from "../assets/account_circle.png";
 
 const Profile = () => {
   return (
@@ -20,7 +22,7 @@ const Profile = () => {
       <div style={{ display: "flex", width: "100%", justifyContent: "space-between", alignItems: "center" }}>
         <div style={{ display: "flex", alignItems: "center" }}>
           <img
-            src="profile-picture-url"
+            src={accountProfile}
             alt="Profile"
             style={{ width: "100px", height: "100px", borderRadius: "50%" }}
           />
@@ -33,7 +35,7 @@ const Profile = () => {
         <div style={{ display: "flex", alignItems: "center", marginRight: "70px" }}>
           <button style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center" }}>
             <span>Edit Profile</span>
-            <i className="fas fa-pencil-alt" style={{ marginLeft: "5px" }}></i>
+            <img src={pencil} alt="Edit" style={{ width: "16px", height: "16px", marginLeft: "5px" }} />
           </button>
         </div>
       </div>
