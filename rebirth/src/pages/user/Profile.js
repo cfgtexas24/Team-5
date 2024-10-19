@@ -29,7 +29,14 @@ const Profile = () => {
         { name: 'Problem-solving', rank: 9 },
         { name: 'Adaptability', rank: 6 },
         { name: 'Creativity', rank: 8 }
-      ];
+    ];
+    const userSkills2 = [
+        { name: 'Communication', rank: 9 },
+        { name: 'Teamwork', rank: 10 },
+        { name: 'Problem-solving', rank: 9 },
+        { name: 'Adaptability', rank: 4 },
+        { name: 'Creativity', rank: 7 }
+    ];
 
     useEffect(() => {
         const fetchUsers = async () => {
@@ -107,7 +114,9 @@ const Profile = () => {
         </div>
       </div>
 
-      <RadarChart skillsData={userSkills} />
+        <div className="w-[50vw] mt-16">
+            <RadarChart skillsData={currUser === 0 ? userSkills : userSkills2} />
+        </div>
     </div>
   );
 };
