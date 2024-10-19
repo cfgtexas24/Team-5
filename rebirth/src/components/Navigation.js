@@ -17,41 +17,41 @@ const Navigation = () => {
 
             {isUserRoute && (
                 <ul className='flex flex-col gap-4 text-center'>
-                    <li className='hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
-                        <Link to='/user/job-search'>
+                    <Link to='/user/job-search'>
+                        <li className='pt-2 pb-2 hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
                             <p className='text-2xl'>Job Board</p>
-                        </Link>
-                    </li>
-                    <li className='hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
-                        <Link to='/user/mylearning'>
+                        </li>
+                    </Link>
+                    <Link to='/user/mylearning'>
+                        <li className='pt-2 pb-2 hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
                             <p className='text-2xl'>My Courses</p>
-                        </Link>
-                    </li>
-                    <li className='hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
-                        <Link to='/user/myapplications'>
+                        </li>
+                    </Link>
+                    <Link to='/user/myapplications'>
+                        <li className='pt-2 pb-2 hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
                             <p className='text-2xl'>My Application</p>
-                        </Link>
-                    </li>
-                    <li className='hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
-                        <Link to='/user/settings'>
+                        </li>
+                    </Link>
+                    <Link to='/user/settings'>
+                        <li className='pt-2 pb-2 hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
                             <p className='text-2xl'>Settings</p>
-                        </Link>
-                    </li>
+                        </li>
+                    </Link>
                 </ul>
             )}
 
             {isEmployerRoute && (
                 <ul className='flex flex-col gap-4 text-center'>
-                    <li className='hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
-                        <Link to='/employer/job-postings'>
+                    <Link to='/employer/job-postings'>
+                        <li className='pt-2 pb-2 hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
                             <p className='text-2xl'>Job Posting</p>
-                        </Link>
-                    </li>
-                    <li className='hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
-                        <Link to='/employer/settings'>
+                        </li>
+                    </Link>
+                    <Link to='/employer/settings'>
+                        <li className='pt-2 pb-2 hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
                             <p className='text-2xl'>Settings</p>
-                        </Link>
-                    </li>
+                        </li>
+                    </Link>
                 </ul>
             )}
         </div>
