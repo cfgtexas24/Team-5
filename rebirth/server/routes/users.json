@@ -19,6 +19,11 @@
         "employer": "McDonald's",
         "posting": "Software Engineer",
         "status": "Pending"
+      },
+      {
+        "job_title": "Unnamed Job",
+        "company": "Unnamed Company",
+        "status": "Rejected"
       }
     ]
   },

@@ -23,8 +23,8 @@ router.post('/', (req, res) => {
     const users = getUsers();
     const newUser = {
         name: req.body.firstName || 'Unnamed User',
-        email: req.body.email || '',
-        phone_number: req.body.phone_number || '',
+        email: req.body.email || 'No Email',
+        phone_number: req.body.phone_number || 'No Phone Number',
         certifications: req.body.certifications || [],
         courses: req.body.courses || [],
         languages: req.body.languages || [],
@@ -73,6 +73,25 @@ router
             res.status(404).send('User not found');
         }
     });
+
+router.post('/:id/applications', (req, res) => {
+    const users = getUsers();
+    const user = users[req.params.id];
+        
+    if (user) {
+        const newApplication = {
+            job_title: req.body.job_title || 'Unnamed Job',
+            company: req.body.company || 'Unnamed Company',
+            status: req.body.status || 'Pending'
+        };
+    
+        user.applications.push(newApplication); // Add the new job application
+        saveUsers(users);
+        res.json({ message: 'Job application added successfully', application: newApplication });
+    } else {
+        res.status(404).send('User not found');
+    }
+});
 
 router.param('id', (req, res, next, id) => {
     const users = getUsers();
