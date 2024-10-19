@@ -13,17 +13,36 @@ const JobBoard = () => {
     { title: 'Frontend Developer', company: 'Meta', location: 'San Francisco, CA', description: 'Detailed job description goes here...' },
   ];
 
+  // return list of jobs whose title includes title parameter
+  function filterJobsByTitle(jobs, title) {
+    console.log('filter')
+    return jobs.filter(job => job.title.toLowerCase().includes(title.toLowerCase()));
+  }
+
   // State to track the currently selected job
   const [selectedJob, setSelectedJob] = useState(null);
+  const [titleSearchTerm, setTitleSearchTerm] = useState("");
+  const [filteredJobs, setFilteredJobs] = useState(jobsData);
+
+  // This function will be passed to the child component
+  const handleTitleSearchTerm = (term) => {
+    setTitleSearchTerm(term); // Update the parent's state with the value from the child
+    
+    // Filter jobs and update state
+    const filtered = jobsData.filter(job => 
+      job.title.toLowerCase().includes(term.toLowerCase())
+    );
+    setFilteredJobs(filtered); // Trigger re-render with updated filtered jobs
+  };
 
   return (
     <div className="job-board mt-10">
       {/* SearchBar component for filtering jobs */}
-      <SearchBar />
+      <SearchBar titleSearchTerm={handleTitleSearchTerm} />
 
       <div className="job-results-and-details">
         {/* JobResults component to display the list of jobs */}
-        <JobResults jobs={jobsData} onSelectJob={setSelectedJob} />
+        <JobResults jobs={filteredJobs} onSelectJob={setSelectedJob} />
 
         {/* JobDetails component to display details of the selected job */}
         <JobDetails job={selectedJob} />

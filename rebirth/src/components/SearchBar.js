@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // SearchBar component for filtering job results
-const SearchBar = () => {
+function SearchBar({ titleSearchTerm }) {
   // State to store the input values for position title, location, salary, and job type
   const [positionTitle, setPositionTitle] = useState('');
   const [location, setLocation] = useState('');
@@ -9,8 +9,10 @@ const SearchBar = () => {
   const [jobType, setJobType] = useState('');
 
   // Placeholder function for the search functionality (to be implemented later)
-  const handleSearch = () => {
-    console.log('Search functionality will be implemented later');
+  const handleSearch = (e) => {
+    const searchTerm = e.target.value;
+    setPositionTitle(searchTerm);
+    titleSearchTerm(searchTerm);
   };
 
   return (
@@ -21,7 +23,7 @@ const SearchBar = () => {
         type="text"
         placeholder="Enter Position Title"
         value={positionTitle}
-        onChange={(e) => setPositionTitle(e.target.value)}
+        onChange={handleSearch}
       />
 
       {/* Input for location */}
