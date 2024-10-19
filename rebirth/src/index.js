@@ -11,17 +11,32 @@ import JobBoard from './pages/JobBoard';
 import MyLearning from './pages/MyLearning';
 import Profile from './pages/Profile';
 import DiscussionBoard from './pages/DiscussionBoard';
+import NoPage from './pages/NoPage';
+import SignUp from './pages/SignUp';
 
 export default function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<Home />}>
-                    <Route index element={<Dashboard />} />
-                    <Route path='/job-board' element={<JobBoard />} />
-                    <Route path='/mylearning' element={<MyLearning />} />
-                    <Route path='/profile' element={<Profile />} />
-                    <Route path='/discussion-board' element={<DiscussionBoard />} />
+                <Route path='' element={<Home />}>
+                    <Route index element={<SignUp />} />
+                    <Route path='/user'>
+                        <Route index element={<Dashboard />} />
+                        <Route path='/user/job-board' element={<JobBoard />} />
+                        <Route path='/user/mylearning' element={<MyLearning />} />
+                        <Route path='/user/profile' element={<Profile />} />
+                        <Route path='/user/discussion-board' element={<DiscussionBoard />} />
+                    </Route>
+                    <Route path='/employer'>
+                        <Route index element={<Dashboard />} />
+                    </Route>
+                    <Route path='/admin'>
+                        <Route index element={<Dashboard />} />
+                    </Route>
+
+                    <Route path='*' element={ <Home /> }>
+                        <Route index path='*' element={ <NoPage /> } />
+                    </Route>
                 </Route>
             </Routes>
         </BrowserRouter>
