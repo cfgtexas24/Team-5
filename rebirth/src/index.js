@@ -13,6 +13,7 @@ import Profile from './pages/Profile';
 import DiscussionBoard from './pages/DiscussionBoard';
 import NoPage from './pages/NoPage';
 import SignUp from './pages/SignUp';
+import MyApplication from './pages/MyApplication';
 
 export default function App() {
     return (
@@ -22,9 +23,10 @@ export default function App() {
                     <Route index element={<SignUp />} />
                     <Route path='/user'>
                         <Route index element={<Dashboard />} />
-                        <Route path='/user/job-board' element={<JobBoard />} />
+                        <Route path='/user/job-search' element={<JobBoard />} />
                         <Route path='/user/mylearning' element={<MyLearning />} />
                         <Route path='/user/profile' element={<Profile />} />
+                        <Route path='/user/myapplications' element={<MyApplication />}  />
                         <Route path='/user/discussion-board' element={<DiscussionBoard />} />
                     </Route>
                     <Route path='/employer'>
