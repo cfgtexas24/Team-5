@@ -1,11 +1,35 @@
 [
     {
-        "student": "John",
+        "students": ["jonathanswift@gmail.com"
+        ],
         "name": "Web Development",
         "module_count" : 3,
         "modules": [
             {
                 "completed": true
+            },
+            {
+                "completed": false
+            },
+            {
+                "completed": false
+            }
+        ]
+    },
+    {
+        "students": ["jonathanswift@gmail.com"
+        ],
+        "name": "CyberSecurity",
+        "module_count" : 5,
+        "modules": [
+            {
+                "completed": true
+            },
+            {
+                "completed": true
+            },
+            {
+                "completed": false
             },
             {
                 "completed": false

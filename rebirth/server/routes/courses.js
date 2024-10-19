@@ -14,6 +14,23 @@ function saveCourses(courses) {
     fs.writeFileSync(coursesFilePath, JSON.stringify(courses, null, 2));
 }
 
+// Function to filter courses by email
+function getCoursesByStudentEmail(email) {
+    const courses = getCourses();
+    return courses
+        .filter(course => course.students && course.students.includes(email))
+        .map(course => {
+            const completedModules = course.modules.filter(module => module.completed).length;
+            const totalModules = course.module_count;
+            const completionPercentage = totalModules > 0 ? (completedModules / totalModules) * 100 : 0;
+
+            return {
+                ...course,
+                completionPercentage: completionPercentage.toFixed(2)
+            };
+        });
+}
+
 router.get('/', (req, res) => {
     const courses = getCourses();
     
@@ -24,17 +41,34 @@ router.get('/', (req, res) => {
         
         return {
             ...course,
-            completionPercentage: completionPercentage.toFixed(2) // Format to 2 decimal places
+            completionPercentage: completionPercentage.toFixed(2)
         };
     });
     
     res.json(coursesWithCompletion);
 });
 
+// Get courses by student email
+router.get('/by-student', (req, res) => {
+    const email = req.query.email;
+    
+    if (!email) {
+        return res.status(400).json({ error: 'Email query parameter is required' });
+    }
+
+    const filteredCourses = getCoursesByStudentEmail(email);
+
+    if (filteredCourses.length > 0) {
+        res.json(filteredCourses);
+    } else {
+        res.status(404).json({ message: `No courses found for student with email: ${email}` });
+    }
+});
+
 router.post('/', (req, res) => {
     const courses = getCourses();
     const newCourse = {
-        student: req.body.student || 'Unnamed Student',
+        students: req.body.students || [],
         title: req.body.title || 'Unnamed Course',
         module_count: req.body.module_count || 0,
         modules: req.body.modules || []
@@ -61,7 +95,7 @@ router
 
             res.json({
                 ...course,
-                completionPercentage: completionPercentage.toFixed(2) // Format to 2 decimal places
+                completionPercentage: completionPercentage.toFixed(2)
             });
         } else {
             res.status(404).send('Course not found');
