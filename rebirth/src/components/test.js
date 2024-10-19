@@ -33,7 +33,7 @@ const UsersComponent = () => {
             <ul>
                 {users.map((user, index) => (
                     <li key={`${user.id}${index}`}>
-                        {user.name} - {user.email}
+                        {user.name} - {user.email} - {user.skills}
                     </li>
                 ))}
             </ul>
