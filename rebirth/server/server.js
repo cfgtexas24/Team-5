@@ -18,10 +18,12 @@ app.get('/', logger, (req, res) => {
 const userRouter = require('./routes/users')
 const employerRouter = require('./routes/employers')
 const jobRouter = require('./routes/jobs')
+const courseRouter = require('./routes/courses')
 
 app.use('/users', userRouter)
 app.use('/employers', employerRouter)
 app.use('/jobs', jobRouter)
+app.use('/courses', courseRouter)
 
 
 function logger(req, res, next) {

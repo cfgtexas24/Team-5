@@ -19,6 +19,7 @@ router.get('/', (req, res) => {
     res.json(jobs);
 });
 
+// search filter by skills
 router.get('/by-skill', (req, res) => {
     const skill = req.query.skill;
     
@@ -36,6 +37,7 @@ router.get('/by-skill', (req, res) => {
     }
 });
 
+// search filter by location
 router.get('/by-location', (req, res) => {
     const location = req.query.location;
 
@@ -53,6 +55,7 @@ router.get('/by-location', (req, res) => {
     }
 });
 
+// search filter by title
 router.get('/by-title', (req, res) => {
     const title = req.query.title;
 
