@@ -1,0 +1,24 @@
+[
+    {
+        "company": "McDonalds",
+        "title": "Software Engineer",
+        "description": "Develop and maintain web applications.",
+        "location": "San Francisco",
+        "salary_range": "50000-70000",
+        "required_skills": [
+            "HTML",
+            "CSS",
+            "JS"
+        ]
+    },
+    {
+        "company": "Walmart",
+        "title": "Cashier",
+        "description": "40+ hours of sufferings per week",
+        "location": "Does it matter",
+        "salary_range": "Very little",
+        "required_skills": [
+            "Willpower"
+        ]
+    }
+]

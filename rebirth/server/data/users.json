@@ -1,0 +1,52 @@
+[
+  {
+    "name": "John",
+    "email": "jonathanswift@gmail.com",
+    "phone_number": "1234567890",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "courses": [
+      "Web Development"
+    ],
+    "languages": [
+      "English"
+    ],
+    "applications": [
+      {
+        "employer": "McDonald's",
+        "posting": "Software Engineer",
+        "status": "Pending"
+      },
+      {
+        "job_title": "Unnamed Job",
+        "company": "Unnamed Company",
+        "status": "Rejected"
+      }
+    ]
+  },
+  {
+    "name": "Alice",
+    "email": "ayao@gmail.com",
+    "phone_number": "5556667777",
+    "skills": [
+      "React"
+    ],
+    "courses": [
+      "Full-Stack Development"
+    ],
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "applications": [
+      {
+        "employer": "Walmart",
+        "posting": "Cashier",
+        "status": "Rejected"
+      }
+    ]
+  }
+]
