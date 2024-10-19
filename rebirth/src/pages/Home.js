@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className='App'>
         <Navigation />
-        <h1 className='text-2xl text-red-700'>Rebirth App is Live!</h1>
+        <h1 className='text-2xl text-red-700'></h1>
         <Outlet />
     </div>
   )
