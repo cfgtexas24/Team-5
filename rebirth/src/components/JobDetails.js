@@ -18,6 +18,9 @@ const JobDetails = ({ job }) => {
       {/* Display the job location */}
       <p>Location: {job.location}</p>
 
+      {/* Display the job type */}
+      <p>Type: {job.job_type}</p>
+
       {/* Display the job description */}
       <div className="job-description">
         <p>{job.description}</p>
