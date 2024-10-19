@@ -2,7 +2,9 @@ import React from 'react'
 
 const JobBoard = () => {
   return (
-    <div>JobBoard</div>
+    <div>
+        <h1>Job search</h1>
+    </div>
   )
 }
 
