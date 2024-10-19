@@ -18,22 +18,22 @@ const Navigation = () => {
             {isUserRoute && (
                 <ul className='flex flex-col gap-4 text-center'>
                     <Link to='/user/job-search'>
-                        <li className='hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
+                        <li className='pt-2 pb-2 hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
                             <p className='text-2xl'>Job Board</p>
                         </li>
                     </Link>
                     <Link to='/user/mylearning'>
-                        <li className='hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
+                        <li className='pt-2 pb-2 hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
                             <p className='text-2xl'>My Courses</p>
                         </li>
                     </Link>
                     <Link to='/user/myapplications'>
-                        <li className='hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
+                        <li className='pt-2 pb-2 hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
                             <p className='text-2xl'>My Application</p>
                         </li>
                     </Link>
                     <Link to='/user/settings'>
-                        <li className='hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
+                        <li className='pt-2 pb-2 hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
                             <p className='text-2xl'>Settings</p>
                         </li>
                     </Link>
@@ -43,12 +43,12 @@ const Navigation = () => {
             {isEmployerRoute && (
                 <ul className='flex flex-col gap-4 text-center'>
                     <Link to='/employer/job-postings'>
-                        <li className='hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
+                        <li className='pt-2 pb-2 hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
                             <p className='text-2xl'>Job Posting</p>
                         </li>
                     </Link>
                     <Link to='/employer/settings'>
-                        <li className='hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
+                        <li className='pt-2 pb-2 hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
                             <p className='text-2xl'>Settings</p>
                         </li>
                     </Link>
