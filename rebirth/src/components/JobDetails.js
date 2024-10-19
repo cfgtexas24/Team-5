@@ -1,30 +1,45 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-// JobDetails component to display detailed information about a selected job
-const JobDetails = ({ job }) => {
-  // If no job is selected, display a placeholder message
-  if (!job) {
-    return <div className="job-details">Select a job to view details</div>;
-  }
+const JobDetails = () => {
+  // Static job data
+  const job = {
+    title: 'Global Quantitative Analyst',
+    company: 'JP Morgan',
+    location: 'Paris, FR',
+    job_type: 'full-time',
+    description: 'This is a detailed job description for a Global Quantitative Analyst at JP Morgan.',
+    requiredSkills: ['JavaScript', 'React', 'Redux']
+  };
+
+  // Log the job data before passing it through Link
+  console.log('Job data being passed:', { ...job, requiredSkills: job.requiredSkills });
 
   return (
     <div className="job-details">
-      {/* Display the job title */}
       <h3>{job.title}</h3>
-
-      {/* Display the company name */}
       <p>Posted by: {job.company}</p>
-
-      {/* Display the job location */}
       <p>Location: {job.location}</p>
+<<<<<<< Updated upstream
 
       {/* Display the job description */}
+=======
+      <p>Type: {job.job_type}</p>
+>>>>>>> Stashed changes
       <div className="job-description">
         <p>{job.description}</p>
       </div>
+      <div className="button-group">
+        <button className="btn">Apply</button>
 
-      {/* Apply button for future functionality */}
-      <button>Apply</button>
+        {/* Pass the job data directly using the React Router v6+ syntax */}
+        <Link 
+          to="/user/mylearning" 
+          state={{ job: { ...job, requiredSkills: job.requiredSkills } }}  // Directly pass state
+        >
+          <button className="btn">See How You Qualify</button>
+        </Link>
+      </div>
     </div>
   );
 };
