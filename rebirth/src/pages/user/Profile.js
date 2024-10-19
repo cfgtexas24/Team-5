@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import pencil from "../../assets/pencil.png";
 import accountProfile from "../../assets/prof_photo.jpg";
-import RadarChart from "../../components/RadarChart";
+import RadarChart from "../../components/radarChart";
 
 const Profile = () => {
     const [users, setUsers] = useState([]);
