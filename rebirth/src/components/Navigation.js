@@ -12,7 +12,7 @@ const Navigation = () => {
     return (
         <div className='absolute bg-[#F2EEEE] flex flex-col gap-16 w-1/6 h-screen'>
             <Link to='/'>
-                <img className='p-6' src={logo} alt="rebirth logo" />
+                <img className='p-6 mx-auto' src={logo} alt="rebirth logo" />
             </Link>
 
             {isUserRoute && (
