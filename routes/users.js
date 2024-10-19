@@ -25,9 +25,11 @@ router.post('/', (req, res) => {
         name: req.body.firstName || 'Unnamed User',
         email: req.body.email || '',
         phone_number: req.body.phone_number || '',
-        skills: req.body.skills || [],
+        certifications: req.body.certifications || [],
         courses: req.body.courses || [],
-        income: req.body.income || 0
+        languages: req.body.languages || [],
+        barriers: body.barriers || [],
+        applications: req.body.applications || []
     };
 
     users.push(newUser);

@@ -16,10 +16,10 @@ app.get('/', logger, (req, res) => {
 })
 
 const userRouter = require('./routes/users')
-//const jobRouter = require('./routes/jobs')
+const employerRouter = require('./routes/employers')
 
 app.use('/users', userRouter)
-//app.use('/jobs', jobRouter)
+app.use('/employers', employerRouter)
 
 
 function logger(req, res, next) {
