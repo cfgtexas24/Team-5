@@ -1,3 +1,4 @@
+// Routing jobs contains HTTPS request routes and simple get, post functionality
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
@@ -14,10 +15,12 @@ function saveJobs(jobs) {
     fs.writeFileSync(jobsFilePath, JSON.stringify(jobs, null, 2));
 }
 
+// https request to get all jobs
 router.get('/', (req, res) => {
     const jobs = getJobs();
     res.json(jobs);
 });
+
 
 // search filter by skills
 router.get('/by-skill', (req, res) => {
@@ -55,6 +58,7 @@ router.get('/by-location', (req, res) => {
     }
 });
 
+
 // search filter by title
 router.get('/by-title', (req, res) => {
     const title = req.query.title;
@@ -73,6 +77,7 @@ router.get('/by-title', (req, res) => {
     }
 });
 
+// request to add new job posting
 router.post('/', (req, res) => {
     const jobs = getJobs();
     const newJob = {
