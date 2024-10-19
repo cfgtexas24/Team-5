@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // SearchBar component for filtering job results
-function SearchBar({ titleSearchTerm, locationSearchTerm, salarySearchVal }) {
+function SearchBar({ titleSearchTerm, locationSearchTerm, salarySearchVal, jobTypeSearchVal}) {
   // State to store the input values for position title, location, salary, and job type
   const [positionTitle, setPositionTitle] = useState('');
   const [location, setLocation] = useState('');
@@ -27,6 +27,13 @@ function SearchBar({ titleSearchTerm, locationSearchTerm, salarySearchVal }) {
     const searchTerm = e.target.value;
     setSalary(searchTerm);
     salarySearchVal(searchTerm);
+  }
+
+  // Job type search functionality
+  const handleTypeSearch = (e) => {
+    const searchTerm = e.target.value;
+    setJobType(searchTerm);
+    jobTypeSearchVal(searchTerm);
   }
 
   return (
@@ -59,7 +66,7 @@ function SearchBar({ titleSearchTerm, locationSearchTerm, salarySearchVal }) {
       </select>
 
       {/* Dropdown for job type (full-time/part-time) */}
-      <select className="mt-2" value={jobType} onChange={(e) => setJobType(e.target.value)}>
+      <select className="mt-2" value={jobType} onChange={handleTypeSearch}>
         <option value="">Select Job Type</option>
         <option value="full-time">Full Time</option>
         <option value="part-time">Part Time</option>

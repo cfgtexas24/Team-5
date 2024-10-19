@@ -17,6 +17,9 @@ const JobResults = ({ jobs, onSelectJob }) => {
 
             {/* Display the company name and location */}
             <p>{job.company} - {job.location}</p>
+
+            {/* Display the job type */}
+            <p>{job.job_type}</p>
           </div>
         ))
       ) : (
