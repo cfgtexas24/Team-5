@@ -107,13 +107,13 @@ const DiscussionBoard = () => {
         />
       </div>
 
-      <div className="content-container grid grid-cols-2">
+      <div className="content-container grid grid-cols-2 gap-16">
         {/* Left-hand side: Certificate Groups */}
-        <aside className="groups-sidebar">
+        <aside className="groups-sidebar w-1/2 bg-slate-100 rounded-2xl px-4 py-2">
           <h3>Certificate Groups</h3>
-          <ul>
+          <ul className='flex flex-col gap-2'>
             {groups.map((group) => (
-              <li key={group}>
+              <li className='hover:bg-white hover:cursor-pointer rounded' key={group}>
                 <button
                   className={group === selectedGroup ? 'active' : ''}
                   onClick={() => setSelectedGroup(group)}
@@ -136,6 +136,7 @@ const DiscussionBoard = () => {
               <div className="post-card" key={post.id}>
                 <h3>{post.title}</h3>
                 <p>Posted by: {post.user}</p>
+                <p>Content: <br />{post.content}</p>
                 <p>Comments: {post.comments}</p>
               </div>
             ))
@@ -149,3 +150,10 @@ const DiscussionBoard = () => {
 };
 
 export default DiscussionBoard;
+
+        // id: 1,
+        // group: 'Digital Marketing & E-commerce',
+        // title: 'Best Tools for SEO',
+        // user: 'john_doe',
+        // comments: 12,
+        // content:
