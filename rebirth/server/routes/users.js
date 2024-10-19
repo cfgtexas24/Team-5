@@ -75,14 +75,15 @@ router
         }
     });
 
-router.post('/:id/applications', (req, res) => {
+router.post('/:email/applications', (req, res) => {
     const users = getUsers();
-    const user = users[req.params.id];
+    const email = req.params.email;
+    const user = users.find(u => u.email === email);
         
     if (user) {
         const newApplication = {
-            job_title: req.body.job_title || 'Unnamed Job',
-            company: req.body.company || 'Unnamed Company',
+            employer: req.body.employer || 'Unnamed Company',
+            posting: req.body.posting || 'Unnamed Job',
             status: req.body.status || 'Pending'
         };
     

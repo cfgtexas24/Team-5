@@ -21,8 +21,8 @@
         "status": "Pending"
       },
       {
-        "job_title": "Unnamed Job",
-        "company": "Unnamed Company",
+        "employer": "Walmart",
+        "posting": "Cashier",
         "status": "Rejected"
       }
     ]
