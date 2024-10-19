@@ -20,15 +20,7 @@ const JobDetails = () => {
       <h3>{job.title}</h3>
       <p>Posted by: {job.company}</p>
       <p>Location: {job.location}</p>
-<<<<<<< Updated upstream
-
-      {/* Display the job type */}
       <p>Type: {job.job_type}</p>
-
-      {/* Display the job description */}
-=======
-      <p>Type: {job.job_type}</p>
->>>>>>> Stashed changes
       <div className="job-description">
         <p>{job.description}</p>
       </div>
@@ -48,5 +40,7 @@ const JobDetails = () => {
 };
 
 export default JobDetails;
+
+
 
 
