@@ -1,12 +1,11 @@
-
 import React, { useState } from 'react';
 import SearchBar from '../../components/SearchBar';
 import JobResults from '../../components/JobResults';
-import EmployerJobDetails from '../../components/EmployerJobDetails'; // Use EmployerJobDetails for employers
+import JobDetails from '../../components/JobDetails';
 import '../../styles/JobBoard.css';
 
-// Main JobBoard component for employers that combines SearchBar, JobResults, and EmployerJobDetails
-const EmployerJobBoard = () => {
+// Main JobBoard component that combines SearchBar, JobResults, and JobDetails
+const JobBoard = () => {
   // Sample job data (could later be fetched from an API)
   const jobsData = [
     { title: 'Global Quantitative Analyst', company: 'JP Morgan', location: 'Paris, FR', description: 'Detailed job description goes here...' },
@@ -26,12 +25,12 @@ const EmployerJobBoard = () => {
         {/* JobResults component to display the list of jobs */}
         <JobResults jobs={jobsData} onSelectJob={setSelectedJob} />
 
-        {/* EmployerJobDetails component to display details and edit option for the selected job */}
-        <EmployerJobDetails job={selectedJob} />
+        {/* JobDetails component to display details of the selected job */}
+        <JobDetails job={selectedJob} />
       </div>
     </div>
   );
 };
 
-export default EmployerJobBoard;
+export default JobBoard;
 
