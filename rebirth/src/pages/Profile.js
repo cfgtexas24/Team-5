@@ -16,38 +16,42 @@ const Profile = () => {
             <p>Phone: 123-456-7890</p>
           </div>
         </div>
-        <div style={{ maxWidth: "300px" }}>
-          <h3>Description</h3>
-          <p>This is a brief description about the person.</p>
-        </div>
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div style={{ display: "flex", alignItems: "center", marginRight: "70px" }}>
           <button style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center" }}>
             <span>Edit Profile</span>
             <i className="fas fa-pencil-alt" style={{ marginLeft: "5px" }}></i>
           </button>
         </div>
       </div>
-      <div style={{ width: "100%", marginTop: "20px", marginLeft: "250px" }}>
-        <h3>Resume</h3>
-        <p>This is the resume content.</p>
-      </div>
-      <div style={{ width: "100%", marginTop: "20px", display: "flex", justifyContent: "space-between", marginRight: "250px" }}>
-        <div style={{ marginLeft: "250px" }}>
-          <h3>Certifications</h3>
-          <ul>
-            <li>Certification 1</li>
-            <li>Certification 2</li>
-          </ul>
+      <div style={{ display: "flex", width: "100%", justifyContent: "space-between", marginTop: "20px" }}>
+        <div style={{ marginLeft: "120px", flex: 1 }}>
+          <div>
+            <h3>Resume</h3>
+            <p>This is the resume content.</p>
+          </div>
+          <div style={{ marginTop: "20px" }}>
+            <h3>Certifications</h3>
+            <ul>
+              <li>Certification 1</li>
+              <li>Certification 2</li>
+            </ul>
+          </div>
         </div>
-        <div style={{ maxWidth: "300px", marginRight: "430px" }}>
-          <h3>Skills</h3>
-          <ul>
-            <li>Skill 1</li>
-            <li>Skill 2</li>
-          </ul>
+        <div style={{ maxWidth: "300px", marginRight: "250px", flex: 1 }}>
+          <div>
+            <h3>Description</h3>
+            <p>This is a brief description about the person.</p>
+          </div>
+          <div style={{ marginTop: "20px" }}>
+            <h3>Skills</h3>
+            <ul>
+              <li>Skill 1</li>
+              <li>Skill 2</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div style={{ width: "100%", marginTop: "40px" }}>
+      <div style={{ width: "100%", marginTop: "150px" }}>
         <h3>My Applications</h3>
         <div style={{ maxHeight: "200px", overflowY: "scroll", border: "1px solid #ccc", padding: "10px" }}>
           <ul className="flex flex-col gap-4">
