@@ -10,7 +10,7 @@ const Navigation = () => {
     const isEmployerRoute = location.pathname.startsWith('/employer/');
 
     return (
-        <div className='absolute bg-[#F2EEEE] flex flex-col gap-16 w-1/6 h-screen'>
+        <div className='fixed left-0 top-0 -z-10 bg-[#F2EEEE] flex flex-col gap-16 w-1/6 h-screen'>
             <Link to='/'>
                 <img className='p-6 mx-auto' src={logo} alt="rebirth logo" />
             </Link>

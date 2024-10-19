@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div className='App'>
             <Navigation />
-            <div className='ml-[16.6vw] px-16 py-8'>
+            <div className='ml-[16.6vw] top-0 px-16 py-8'>
                 {/* <UsersComponent /> */}
                 <Outlet />
             </div>
