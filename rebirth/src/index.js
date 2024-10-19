@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, BrowserRouter, Navigate } from 'react-router-dom';
 import './styles/index.css';
 import './styles/style.css';
 import './styles/utils.css';
@@ -10,10 +10,11 @@ import Dashboard from './pages/Dashboard';
 import JobBoard from './pages/JobBoard';
 import MyLearning from './pages/MyLearning';
 import Profile from './pages/Profile';
-import DiscussionBoard from './pages/DiscussionBoard';
+// import DiscussionBoard from './pages/DiscussionBoard';
 import NoPage from './pages/NoPage';
 import SignUp from './pages/SignUp';
 import MyApplication from './pages/MyApplication';
+import Settings from './pages/Settings';
 
 export default function App() {
     return (
@@ -22,12 +23,13 @@ export default function App() {
                 <Route path='' element={<Home />}>
                     <Route index element={<SignUp />} />
                     <Route path='/user'>
-                        <Route index element={<Dashboard />} />
+                        <Route index element={<Navigate to='/user/job-search' />} />
                         <Route path='/user/job-search' element={<JobBoard />} />
                         <Route path='/user/mylearning' element={<MyLearning />} />
                         <Route path='/user/profile' element={<Profile />} />
                         <Route path='/user/myapplications' element={<MyApplication />}  />
-                        <Route path='/user/discussion-board' element={<DiscussionBoard />} />
+                        {/* <Route path='/user/discussion-board' element={<DiscussionBoard />} /> */}
+                        <Route path='/user/settings' element={<Settings />} />
                     </Route>
                     <Route path='/employer'>
                         <Route index element={<Dashboard />} />

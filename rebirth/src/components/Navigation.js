@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Navigation = () => {
     return (
-        <div className='bg-[#F2EEEE] flex flex-col gap-16 w-1/6 h-screen'>
+        <div className='absolute bg-[#F2EEEE] flex flex-col gap-16 w-1/6 h-screen'>
             <img className='p-6' src={logo} alt="rebirth logo" />
             <ul className='flex flex-col gap-4 text-center'>
                 <li>
@@ -18,12 +18,12 @@ const Navigation = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to='/user/myapplication'>
+                    <Link to='/user/myapplications'>
                         <p className='text-2xl'>My Application</p>
                     </Link>
                 </li>
                 <li>
-                    <Link to=' '>
+                    <Link to='/user/settings'>
                         <p className='text-2xl'>Settings</p>
                     </Link>
                 </li>
