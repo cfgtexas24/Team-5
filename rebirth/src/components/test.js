@@ -31,8 +31,8 @@ const UsersComponent = () => {
         <div>
             <h1>List of Users</h1>
             <ul>
-                {users.map((user) => (
-                    <li key={user.id}>
+                {users.map((user, index) => (
+                    <li key={`${user.id}${index}`}>
                         {user.name} - {user.email}
                     </li>
                 ))}
