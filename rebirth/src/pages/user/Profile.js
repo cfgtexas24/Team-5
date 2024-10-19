@@ -3,6 +3,7 @@ import pencil from "../../assets/pencil.png";
 import accountProfile from "../../assets/prof_photo.jpg";
 import accountProfile2 from "../../assets/Alice.jpg";
 import RadarChart from "../../components/radarChart";
+import googleCert from "../../assets/googleCert.png";
 
 const Profile = () => {
     const [users, setUsers] = useState([]);
@@ -77,6 +78,7 @@ const Profile = () => {
           </div>
           <div style={{ marginTop: "20px" }}>
             <h3>Certifications</h3>
+            <img src={googleCert} alt="Google Certificate" style={{ width: "100px", height: "100px" }} />
             <ul>
               <li>{users[currUser].courses}</li>
             </ul>

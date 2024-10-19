@@ -15,7 +15,9 @@ const ProfileLink = () => {
     <div className='absolute top-3 right-4 flex gap-4 items-center w-30'>
         <div>
             <img src={notificationIcon} alt="notification-icon" className="w-10"/>
+      
         </div>
+        
         <Link to='/user/profile'>
             <img src={profileIcon} alt="profile-icon" className="w-14 h-14 ml-4 rounded-full object-cover"/>
         </Link>
