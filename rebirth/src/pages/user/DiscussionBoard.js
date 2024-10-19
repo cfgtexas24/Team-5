@@ -247,7 +247,7 @@ const DiscussionBoard = () => {
                 <h3>{post.title}</h3>
                 <p className='t3'>Posted by: {post.user}</p>
                 <p className='t4'>Content: <br />{post.content}</p>
-                <p className='t3 ml-auto block'>Comments: {post.comments}</p>
+                <p className='t3 ml-auto'>Comments: {post.comments}</p>
               </div>
             ))
           ) : (

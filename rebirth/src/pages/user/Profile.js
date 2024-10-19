@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import pencil from "../../assets/pencil.png";
 import accountProfile from "../../assets/prof_photo.jpg";
+import accountProfile2 from "../../assets/Alice.jpg";
 import RadarChart from "../../components/radarChart";
 
 const Profile = () => {
@@ -51,7 +52,7 @@ const Profile = () => {
       <div style={{ display: "flex", width: "100%", justifyContent: "space-between", alignItems: "center" }}>
         <div style={{ display: "flex", alignItems: "center" }}>
           <img
-            src={accountProfile}
+            src={currUser === 0 ? accountProfile : accountProfile2}
             alt="Profile"
             style={{ width: "100px", height: "100px", borderRadius: "50%" }}
           />
