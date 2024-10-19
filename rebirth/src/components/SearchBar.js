@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // SearchBar component for filtering job results
-function SearchBar({ titleSearchTerm, locationSearchTerm }) {
+function SearchBar({ titleSearchTerm, locationSearchTerm, salarySearchVal }) {
   // State to store the input values for position title, location, salary, and job type
   const [positionTitle, setPositionTitle] = useState('');
   const [location, setLocation] = useState('');
@@ -20,6 +20,13 @@ function SearchBar({ titleSearchTerm, locationSearchTerm }) {
     const searchTerm = e.target.value;
     setLocation(searchTerm);
     locationSearchTerm(searchTerm);
+  }
+
+  // Salary search functionality
+  const handleSalarySearch = (e) => {
+    const searchTerm = e.target.value;
+    setSalary(searchTerm);
+    salarySearchVal(searchTerm);
   }
 
   return (
@@ -43,7 +50,7 @@ function SearchBar({ titleSearchTerm, locationSearchTerm }) {
       />
 
       {/* Dropdown for salary range */}
-      <select className="mt-2" value={salary} onChange={(e) => setSalary(e.target.value)}>
+      <select className="mt-2" value={salary} onChange={handleSalarySearch}>
         <option value="">Select Salary range</option>
         <option value="20k-40k">20k-40k</option>
         <option value="30k-60k">30k-60k</option>
