@@ -36,6 +36,40 @@ router.get('/by-skill', (req, res) => {
     }
 });
 
+router.get('/by-location', (req, res) => {
+    const location = req.query.location;
+
+    if (!location) {
+        return res.status(400).json({ error: 'Location query parameter is required' });
+    }
+
+    const jobs = getJobs();
+    const filteredJobs = jobs.filter(job => job.location.toLowerCase() === location.toLowerCase());
+
+    if (filteredJobs.length > 0) {
+        res.json(filteredJobs);
+    } else {
+        res.status(404).json({ message: `No jobs found in location: ${location}` });
+    }
+});
+
+router.get('/by-title', (req, res) => {
+    const title = req.query.title;
+
+    if (!title) {
+        return res.status(400).json({ error: 'Title query parameter is required' });
+    }
+
+    const jobs = getJobs();
+    const filteredJobs = jobs.filter(job => job.title.toLowerCase() === title.toLowerCase());
+
+    if (filteredJobs.length > 0) {
+        res.json(filteredJobs);
+    } else {
+        res.status(404).json({ message: `No jobs found with title: ${title}` });
+    }
+});
+
 router.post('/', (req, res) => {
     const jobs = getJobs();
     const newJob = {
