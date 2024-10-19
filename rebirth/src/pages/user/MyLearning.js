@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import SkillsGapAnalysis from '../../components/SkillsGapAnalysis';
+import RecommendedCourses from '../../components/RecommendedCourses';
 import { Doughnut } from 'react-chartjs-2';
-import 'chart.js/auto'; // Automatically registers the necessary components
+import 'chart.js/auto'; // Automatically registers necessary components
 
+// Generate chart data for the completion percentages
 const generateChartData = (percentage) => ({
   labels: ['Completed', 'Remaining'],
   datasets: [
@@ -15,6 +19,24 @@ const generateChartData = (percentage) => ({
 });
 
 const MyLearning = () => {
+  const location = useLocation();
+  const job = location.state?.job || {};
+
+  console.log('Job data in MyLearning:', job);
+
+  // Dummy user data
+  const user = {
+    username: 'employee123',
+    skills: ['JavaScript', 'HTML', 'CSS'],
+  };
+
+  // Get the missing skills from the job's required skills and the user's current skills
+  const missingSkills = job.requiredSkills
+    ? job.requiredSkills.filter(skill => !user.skills.includes(skill))
+    : [];
+
+  console.log('Missing skills:', missingSkills);
+
   const [percentages] = useState({
     digitalMarketing: 88,
     projectManagement: 100,
@@ -49,6 +71,16 @@ const MyLearning = () => {
   return (
     <div className="mt-10">
       <h2 className="text-2xl font-bold mb-6">My Learning</h2>
+
+      {/* Render Skills Gap Analysis and Recommended Courses if job is selected */}
+      {job.title && (
+        <div className="analysis-section mb-8">
+          <SkillsGapAnalysis user={user} job={job} />
+          <RecommendedCourses missingSkills={missingSkills} />
+        </div>
+      )}
+
+      {/* Display Learning Progress */}
       <div style={{ maxHeight: '400px', overflowY: 'scroll' }}>
         <ul className="flex flex-col gap-4">
           {courses.map((course, index) => (
@@ -88,3 +120,4 @@ const MyLearning = () => {
 };
 
 export default MyLearning;
+
