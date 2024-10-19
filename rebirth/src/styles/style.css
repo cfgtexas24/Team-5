@@ -16,12 +16,9 @@
     --clr-gray900: hsl(0, 0%, 10%);
     --clr-black:   hsl(0, 0%, 0%);
 
-    --clr-violet:   #595685;
-    --clr-coolgray: #8695C0;
-    --clr-burgundy: #891422;
-    --clr-pantone: #EF233C;
-    --clr-honolulu: #1678B9;
-    --clr-ruddy: #64A6D8;
+    --clr-light-yellow:   #FFD67C;
+    --clr-Dark-yellow: #EDAE26;
+    --clr-light-gray: #F2EEEE;
 
     --clr-red:          #ED0000;
     --clr-red-light:    #FFD4D4;

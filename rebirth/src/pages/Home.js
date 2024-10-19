@@ -6,8 +6,9 @@ const Home = () => {
   return (
     <div className='App'>
         <Navigation />
-        <h1 className='text-2xl text-red-700'></h1>
-        <Outlet />
+        <div className='ml-[16.6vw] px-16 py-8'>
+            <Outlet />
+        </div>
     </div>
   )
 }
