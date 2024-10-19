@@ -11,6 +11,7 @@ const Signup = () => {
 
   const handleLogin = async (role) => {
     const credentials = { name, email, password, role };
+    localStorage.setItem('name', name);
 
     try {
       // Send credentials to the backend

@@ -9,7 +9,8 @@ const Profile = () => {
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [currUser, setCurrUser] = useState(0);
+    const name = localStorage.getItem('name');
+    const [currUser, setCurrUser] = useState(name === 'John' ? 0 : 1);
 
     const userSkills = [
         { name: 'Communication', rank: 8 },
