@@ -10,7 +10,7 @@ const Navigation = () => {
     const isEmployerRoute = location.pathname.startsWith('/employer/');
 
     return (
-        <div className='fixed left-0 top-0 -z-10 bg-[#F2EEEE] flex flex-col gap-16 w-1/6 h-screen'>
+        <div className='fixed left-0 top-0 z-10 bg-[#F2EEEE] flex flex-col gap-16 w-1/6 h-screen'>
             <Link to='/'>
                 <img className='p-6 mx-auto' src={logo} alt="rebirth logo" />
             </Link>
@@ -30,6 +30,11 @@ const Navigation = () => {
                     <Link to='/user/myapplications'>
                         <li className='pt-2 pb-2 hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
                             <p className='text-2xl'>My Application</p>
+                        </li>
+                    </Link>
+                    <Link to='/user/discussion-board'>
+                        <li className='pt-2 pb-2 hover:bg-[var(--clr-light-yellow)] hover:cursor-pointer'>
+                            <p className='text-2xl'>Discussion Board</p>
                         </li>
                     </Link>
                     <Link to='/user/settings'>
