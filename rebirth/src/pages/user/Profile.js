@@ -1,140 +1,26 @@
-// import React from 'react'
-
-// const Profile = () => {
-//   return (
-//     <div>Profile</div>
-//   )
-// }
-
-// export default Profile;
-
-
-
-
-
-import React from "react";
-import pencil from "../../assets/pencil.png";
-import accountProfile from "../../assets/account_circle.png";
-
+import React, {useEffect, useState} from 'react'; 
 const Profile = () => {
+  const[profile, setProfile] = useState(null); 
+
+  useEffect(() => {
+    fetch('http://localhost:3001/users/jonathanswift@gmail.com')
+    .then((response)=> response.json())
+    .then((data) => setProfile(data))
+    .catch((error) => console.error('Error fetching profile:', error)); 
+  }, []);
+
   return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-      <div style={{ display: "flex", width: "100%", justifyContent: "space-between", alignItems: "center" }}>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <img
-            src={accountProfile}
-            alt="Profile"
-            style={{ width: "100px", height: "100px", borderRadius: "50%" }}
-          />
-          <div style={{ marginLeft: "20px" }}>
-            <h2>Full Name</h2>
-            <p>Email: example@example.com</p>
-            <p>Phone: 123-456-7890</p>
-          </div>
-        </div>
-        <div style={{ display: "flex", alignItems: "center", marginRight: "70px" }}>
-          <button style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center" }}>
-            <span>Edit Profile</span>
-            <img src={pencil} alt="Edit" style={{ width: "16px", height: "16px", marginLeft: "5px" }} />
-          </button>
-        </div>
+    <div className = "profie-container">
+     <h1>Profile</h1> 
+    {profile ? (
+      <div> 
+      <p><strong>Name:</strong> {profile.name}</p>
+      <p><strong>Email</strong> {profile.email}</p>
       </div>
-      <div style={{ display: "flex", width: "100%", justifyContent: "space-between", marginTop: "20px" }}>
-        <div style={{ marginLeft: "120px", flex: 1 }}>
-          <div>
-            <h3>Resume</h3>
-            <p>This is the resume content.</p>
-          </div>
-          <div style={{ marginTop: "20px" }}>
-            <h3>Certifications</h3>
-            <ul>
-              <li>Certification 1</li>
-              <li>Certification 2</li>
-            </ul>
-          </div>
-        </div>
-        <div style={{ maxWidth: "300px", marginRight: "250px", flex: 1 }}>
-          <div>
-            <h3>Description</h3>
-            <p>This is a brief description about the person.</p>
-          </div>
-          <div style={{ marginTop: "20px" }}>
-            <h3>Skills</h3>
-            <ul>
-              <li>Skill 1</li>
-              <li>Skill 2</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div style={{ width: "100%", marginTop: "150px" }}>
-        <h3>My Applications</h3>
-        <div style={{ maxHeight: "200px", overflowY: "scroll", border: "1px solid #ccc", padding: "10px" }}>
-          <ul className="flex flex-col gap-4">
-            <li>
-              <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Job Title
-                <p>Description</p>
-              </div>
-            </li>
-            <li>
-              <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Job Title
-                <p>Description</p>
-              </div>
-            </li>
-            <li>
-              <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Job Title
-                <p>Description</p>
-              </div>
-            </li>
-            <li>
-              <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Job Title
-                <p>Description</p>
-              </div>
-            </li>
-            <li>
-              <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Job Title
-                <p>Description</p>
-              </div>
-            </li>
-            <li>
-              <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Job Title
-                <p>Description</p>
-              </div>
-            </li>
-            <li>
-              <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Job Title
-                <p>Description</p>
-              </div>
-            </li>
-            <li>
-              <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Job Title
-                <p>Description</p>
-              </div>
-            </li>
-            <li>
-              <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Job Title
-                <p>Description</p>
-              </div>
-            </li>
-            <li>
-              <div style={{ background: "#f0f0f0", borderRadius: "8px", padding: "10px" }}>
-                Job Title
-                <p>Description</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    ) : ( 
+      <p> Loading profile...</p>
+      )}
+      </div> 
   );
 };
 
