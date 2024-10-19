@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import profileIcon from "../assets/account_circle.png";
+import profileIcon from "../assets/prof_photo.jpg";
 import notificationIcon from '../assets/notifications.png';
 
 const ProfileLink = () => {
@@ -12,12 +12,12 @@ const ProfileLink = () => {
   }
 
   return (
-    <div className='absolute top-4 right-4 flex gap-4 items-center w-24'>
+    <div className='absolute top-3 right-4 flex gap-4 items-center w-30'>
         <div>
-            <img src={notificationIcon} alt="notification-icon" />
+            <img src={notificationIcon} alt="notification-icon" className="w-10"/>
         </div>
         <Link to='/user/profile'>
-            <img src={profileIcon} alt="profile-icon" />
+            <img src={profileIcon} alt="profile-icon" className="w-14 h-14 ml-4 rounded-full object-cover"/>
         </Link>
     </div>
   );

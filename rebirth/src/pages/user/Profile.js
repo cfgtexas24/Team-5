@@ -14,7 +14,7 @@
 
 import React, { useEffect, useState } from "react";
 import pencil from "../../assets/pencil.png";
-import accountProfile from "../../assets/account_circle.png";
+import accountProfile from "../../assets/prof_photo.jpg";
 import RadarChart from "../../components/radarChart";
 
 const Profile = () => {
@@ -70,9 +70,9 @@ const Profile = () => {
             style={{ width: "100px", height: "100px", borderRadius: "50%" }}
           />
           <div style={{ marginLeft: "20px" }}>
-            <h2>{users[currUser].name}</h2>
-            <p>Email: {users[currUser].email}</p>
-            <p>Phone: {users[currUser].phone_number}</p>
+            <h1 className="text-4xl">{users[currUser].name}</h1>
+            <p className="text-2xl">Email: {users[currUser].email}</p>
+            <p className="text-2xl">Phone: {users[currUser].phone_number}</p>
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "center", marginRight: "70px" }}>
